@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e90ff;
+            color: white;
+            padding: 1rem 2rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem;
+            background: url('https://via.placeholder.com/1500x400') no-repeat center/cover;
+            color: white;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 2rem;
+        }
+
+        .search-bar input, .search-bar select, .search-bar button {
+            padding: 0.5rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .results {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card h3 {
+            margin: 0.5rem 0;
+        }
+
+        .card button {
+            padding: 0.5rem 1rem;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">TourismSite</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tours</a>
+            <a href="#">Bookings</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explore the World with Ease</h1>
+        <p>Find and book your dream tours with just a few clicks!</p>
+    </section>
+
+    <section class="search-bar">
+        <input type="text" placeholder="Enter Destination">
+        <select>
+            <option value="">Select Date</option>
+            <option value="2025-01-20">Jan 20, 2025</option>
+            <option value="2025-01-21">Jan 21, 2025</option>
+        </select>
+        <button>Search</button>
+    </section>
+
+    <section class="results">
+        <!-- Tour Cards -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Tour Image">
+            <h3>Destination 1</h3>
+            <p>Price: $100</p>
+            <button>Book Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Tour Image">
+            <h3>Destination 2</h3>
+            <p>Price: $150</p>
+            <button>Book Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Tour Image">
+            <h3>Destination 3</h3>
+            <p>Price: $200</p>
+            <button>Book Now</button>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 1rem; background-color: #1e90ff; color: white;">
+        <p>&copy; 2025 TourismSite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.search-bar button').addEventListener('click', () => {
+            alert('Search functionality coming soon!');
+        });
+
+        const bookButtons = document.querySelectorAll('.card button');
+        bookButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Booking functionality coming soon!');
+            });
+        });
+    </script>
+
+</body>
+</html>
