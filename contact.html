@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+            border: 2px solid #333;
+            border-radius: 22px;
+            background: #f1f1f1;
+            box-shadow:  5px 5px 12px #5a5a5a,
+             -5px -5px 12px #ffffff;
+
+        }
+        .how-it-works {
+            width: 55%;
+            
+   
+        }
+        .how-it-works h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .how-it-works ul {
+            display: inline-block;
+            margin-left: 25px;
+            width: 85%;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+    
+            
+        }
+        .how-it-works ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+            
+        }
+        .how-it-works ul li:before {
+            content: "\2022";
+            color: orange;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+            
+        }
+        .social-icons {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .quote-form {
+            width: 45%;
+            border: 2px solid rgb(168, 168, 168);
+            border-radius: 4px;
+            padding: 20px;
+            border-radius: 22px;
+            background: #e0e0e0;
+            box-shadow:  5px 5px 12px #5a5a5a,
+             -5px -5px 12px #ffffff;
+            
+        }
+            
+        .quote-form h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .quote-form form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .quote-form form .row {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+        }
+        .quote-form form input,
+        .quote-form form textarea,
+        .quote-form form select {
+            width: calc(50% - 10px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .quote-form form textarea {
+            width: 100%;
+            height: 80px;
+        }
+        .quote-form form .full-width {
+            width: 100%;
+        }
+        .quote-form form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .quote-form form button:hover {
+            background-color: #218838;
+        }
+        .contact-us{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="how-it-works">
+            <h2>How It Works</h2>
+            <ul>
+                <li>Tell us details of your holiday plan.</li>
+                <li>After you submit the form, one of our travel experts will get back to you with customised holiday package based on your requirement, within 24 hours.</li>
+                <li>Grab the deal and start packing your bags for an indelible holiday with Tour My India.</li>
+            </ul>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLT_EwvEW7nv6i2A23GUHbK7EeCa37zmLmbQ&s" alt="Twitter">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png" alt="Instagram">
+            </div>
+            <div class="contact">Call Us for details<br>+91 9876543210</div>
+        </div>
+
+        <div class="quote-form">
+            <div class="contact-us"><h2><span style="color: green;;">CONTACT US</span></h2></div>
+            <form>
+                <div class="row">
+                    <input type="text" placeholder="YOUR NAME" required>
+                    <select required>
+                        <option value="" disabled selected>SELECT COUNTRY</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Australia">Australia</option>
+
+                    </select>
+                </div>
+                <input type="email" placeholder="EMAIL" class="full-width" required>
+                <textarea placeholder="ENTER YOUR TOUR DESCRIPTION" class="full-width" required></textarea>
+                <div class="row">
+                    <input type="date" placeholder="TRAVEL DATES" required>
+                    <input type="text" placeholder="DURATION" required>
+                </div>
+                <div class="row">
+                    <input type="number" placeholder="NO. OF PERSON" required>
+                    <input type="tel" placeholder="CONTACT NO." required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
