@@ -12,4 +12,10 @@ project-folder/
     open aditya
     close aditya
 {
-close
+close the push request:
+1) fork the repo
+2) edit the content
+3) commit on your repo
+4) crete a push request
+5) merge
+6) done
