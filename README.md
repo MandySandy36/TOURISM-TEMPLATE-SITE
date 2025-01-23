@@ -10,3 +10,4 @@ project-folder/
     ├── destination3.jpg
 
     open aditya
+    close aditya
