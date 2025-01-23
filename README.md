@@ -8,3 +8,5 @@ project-folder/
     ├── destination1.jpg
     ├── destination2.jpg
     ├── destination3.jpg
+
+    open aditya
