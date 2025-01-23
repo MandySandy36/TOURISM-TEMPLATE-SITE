@@ -11,3 +11,5 @@ project-folder/
 
     open aditya
     close aditya
+{
+close
