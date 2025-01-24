@@ -11,14 +11,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff; /* Soft blue background */
+            background: linear-gradient(to bottom, #8db596, #cce3de); /* Forest and beach gradient */
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(90deg, #1e90ff, #87ceeb); /* Gradient navbar */
+            background: linear-gradient(90deg, #4caf50, #82c4c3); /* Forest to beach gradient */
             color: white;
             padding: 1rem 2rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -33,15 +33,15 @@
         }
 
         .navbar a:hover {
-            color: #ffdd59; /* Yellow hover effect */
+            color: #ffdd57; /* Bright sun yellow */
         }
 
         .carousel {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-bottom: 64px;
-            margin-top: 20px;
+            padding: 10px 0;
+            background: #89deab; /* Light beach-inspired green */
         }
 
         .carousel-arrow {
@@ -50,7 +50,7 @@
             margin-block: auto;
             height: max-content;
             width: 50px;
-            background-color: #ffffff;
+            background-color: #c7e3d2;
             border: none;
             font-size: 3rem;
             padding: 0;
@@ -58,6 +58,7 @@
             opacity: 0.6;
             transition: opacity 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
         }
 
         .carousel-arrow:hover,
@@ -96,7 +97,7 @@
             justify-content: center;
             align-items: center;
             scroll-snap-align: center;
-            background: linear-gradient(120deg, #ffa07a, #f08080); /* Gradient background */
+            background: linear-gradient(120deg, #5bbc69, #55a8d4); /* Forest to beach gradient */
             text-align: center;
             border-radius: 20px;
             color: white;
@@ -133,6 +134,73 @@
                 width: 90%; /* For mobile, occupy the majority of the screen */
             }
         }
+
+        .header {
+            padding: 10px;
+            margin: 0px;
+            background: linear-gradient(to right, #38761d, #cfe2f3); /* Forest to beach gradient */
+            text-align: center;
+            background: url('wmhimg/background.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100px;
+            padding: 30px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+        }
+
+        .cards {
+            margin: 20px 20px 20px 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Adds space between text and image */
+            gap: 20px; /* Adds spacing between the elements */
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .cards .text h1 {
+            color: #3c763d; /* Forest green */
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .cards .text h3 {
+            color: #1e88e5; /* Beach blue */
+            margin-bottom: 15px;
+        }
+
+        .cards .text p {
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .text {
+            flex: 1; /* Text takes up equal space */
+        }
+
+        .image img {
+            max-width: 300px; /* Makes the image responsive */
+            height: auto; /* Preserves the aspect ratio */
+            flex: 1; /* Adjusts the image size relative to the text */
+            object-fit: cover; /* Ensures the image doesn't stretch */
+        }
+
+        .infocard {
+            background-color: #c6e2f7; /* Beachy light blue */
+            padding: 50px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #4caf50; /* Forest green */
+            color: white;
+        }
     </style>
 
     <header class="navbar">
@@ -144,7 +212,9 @@
             <a href="#">Contact Us</a>
         </nav>
     </header>    
-
+    <div class="header">
+        <h1>Journey to West Maharashtra: Nature, Culture, and Adventure</h1>
+    </div>
     <div class="carousel">
         <button class="carousel-arrow carousel-arrow--prev" onclick="handleCarouselMove(false)">
             &#8249;
@@ -160,28 +230,98 @@
                 <img src="wmhimg/1.webp" alt="Mumbai">
             </div>
             <div class="carousel-slide">
-                <h1>Delhi</h1>
-                <img src="wmhimg/2.webp" alt="Delhi">
+                <h1>Lonavala & Khandala</h1>
+                <img src="wmhimg/2.avif" alt="Lonavala & Khandala">
             </div>
             <div class="carousel-slide">
-                <h1>Chennai</h1>
-                <img src="wmhimg/3.webp" alt="Chennai">
+                <h1>Mahabaleshwar</h1>
+                <img src="wmhimg/3.avif" alt="Mahabaleshwar">
             </div>
             <div class="carousel-slide">
-                <h1>Kolkata</h1>
-                <img src="wmhimg/4.webp" alt="Kolkata">
+                <h1>Nashik</h1>
+                <img src="wmhimg/4.webp" alt="Nashik">
             </div>
             <div class="carousel-slide">
-                <h1>Bangalore</h1>
-                <img src="wmhimg/5.webp" alt="Bangalore">
+                <h1>Malvan</h1>
+                <img src="wmhimg/5.avif" alt="Malvan">
             </div>
             <div class="carousel-slide">
-                <h1>Hyderabad</h1>
-                <img src="wmhimg/6.webp" alt="Hyderabad">
+                <h1>Ratnagiri</h1>
+                <img src="wmhimg/6.jpg" alt="Ratnagiri">
             </div>
         </div>
     </div>
-
+    <div class="infocard">
+        <div class="cards">
+            <div class="text">
+                <h1>Mumbai</h1>
+                <h3>2-day trip</h3>
+                <p>Speckled with Victorian buildings, lofty skyscrapers, the glamour of Bollywood, pulsating nightlife, and romantic beaches, the mega-city of Mumbai is a mecca for dreamers looking to make it big.</p>
+                <a href="trip1.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/1.webp" alt="Mumbai">
+            </div>
+        </div>
+        <div class="cards">
+            <div class="text">
+                <h1>Lonavala & Khandala</h1>
+                <h3>1-day trip</h3>
+                <p>Just 4.6 kms apart from each other, Lonavala and Khandala are home to dramatic landscapes, historical forts, ancient caves, charming sunset points, beautiful lakes and cascading waterfalls.</p>
+                <a href="trip2.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/2.avif" alt="Lonavala & Khandala">
+            </div>
+        </div>
+        <div class="cards">
+            <div class="text">
+                <h1>Mahabaleshwar</h1>
+                <h3>2-day trip</h3>
+                <p>Mahabaleshwar is the ideal hill station getaway from Mumbai with its mesmerising waterfalls, old forts, historic temples and long stretches of vibrant strawberry plantations.</p>
+                <a href="trip3.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/3.avif" alt="Mahabaleshwar">
+            </div>
+        </div>
+        <div class="cards">
+            <div class="text">
+                <h1>Nashik</h1>
+                <h3>2-day trip</h3>
+                <p>On one hand a spiritually awakened tourist spot, while on the other it is considered the wine and grape capital of India, that’s Nashik for you all.</p>
+                <a href="trip1.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/4.webp" alt="Nashik">
+            </div>
+        </div>
+        <div class="cards">
+            <div class="text">
+                <h1>Malvan</h1>
+                <h3>2-day trip</h3>
+                <p>Located in the Konkan heartland, Malvan is a charming seaside town known for its Goa like vibes, pristine beaches, clear blue waters, adventure sports, majestic sea-fort, and superior coastal cuisine.</p>
+                <a href="trip2.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/5.avif" alt="Malvan">
+            </div>
+        </div>        
+        <div class="cards">
+            <div class="text">
+                <h1>Ratnagiri</h1>
+                <h3>3-day trip</h3>
+                <p>Ratnagiri is a beautiful coastal city in Maharashtra, India, where the Sahyadri hills meet the Arabian Sea. It's known for its rich history, stunning natural beauty, and delicious Alphonso mangoes.</p>
+                <a href="trip3.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/6.jpg" alt="Ratnagiri">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 TourismSite. All rights reserved.</p>
+    </footer>
     <script>
         const carousel = document.querySelector(".carousel-container");
         const slide = document.querySelector(".carousel-slide");

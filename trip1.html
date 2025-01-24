@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WestMH</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #8db596, #cce3de); /* Forest and beach gradient */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #4caf50; /* Forest to beach gradient */
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffdd57; /* Bright sun yellow */
+        }
+
+
+        .header {
+            padding: 10px;
+            margin: 0px;
+            background: linear-gradient(to right, #38761d, #cfe2f3); /* Forest to beach gradient */
+            text-align: center;
+            background: url('wmhimg/background.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100px;
+            padding: 30px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+        }
+
+        .cards {
+            margin: 20px 20px 20px 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Adds space between text and image */
+            gap: 20px; /* Adds spacing between the elements */
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .cards .text h1 {
+            color: #3c763d; /* Forest green */
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .cards .text h3 {
+            color: #1e88e5; /* Beach blue */
+            margin-bottom: 15px;
+        }
+
+        .cards .text p {
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .text {
+            flex: 1; /* Text takes up equal space */
+        }
+
+        .image img {
+            max-width: 300px; /* Makes the image responsive */
+            height: auto; /* Preserves the aspect ratio */
+            flex: 2; /* Adjusts the image size relative to the text */
+            object-fit: cover; /* Ensures the image doesn't stretch */
+            right: 20px;
+        }
+
+        .infocard {
+            background-color: #8bd5a1; /* Beachy light blue */
+            padding: 50px 100px 50px 100px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #4caf50; /* Forest green */
+            color: white;
+        }
+    </style>
+
+    <header class="navbar">
+        <div class="logo">TourismSite</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tours</a>
+            <a href="#">Bookings</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>    
+
+    <div class="infocard">
+        <div class="cards">
+            <div class="text">
+                <h1>Mumbai</h1>
+                <h3>2-day trip</h3>
+                <h4>Package : 20,000 Rs</h4>
+                <div class="image">
+                    <img src="wmhimg/1.webp" alt="Mumbai">
+                </div>
+                <p><i>Here's a concise tourist guide to Mumbai:</i> <br>
+                    <ol>
+                        <li><b>Gateway of India:</b> Iconic arch by the sea, perfect for photos and boat rides to Elephanta Caves.<br></li>
+                        
+                        <li><b>Marine Drive:</b> Enjoy the Queen's Necklace at night or a peaceful stroll by the Arabian Sea.<br></li>
+                        
+                        <li><b>Chhatrapati Shivaji Maharaj Terminus:</b> UNESCO-listed Gothic architecture, great for history lovers.<br></li>
+                        
+                        <li><b>Colaba Causeway:</b> Shop for trendy clothes, jewelry, and souvenirs at affordable prices.<br>
+                        
+                            <li><b>Juhu Beach:</b> Perfect for relaxing and enjoying Mumbai's famous street food like vada pav and pav bhaji.<br></li>
+                        
+                            <li><b>Bandra-Worli Sea Link:</b> A modern engineering marvel offering stunning views, especially at sunset.<br></li>
+                        
+                            <li><b>Haji Ali Dargah:</b> A spiritual site located on a small islet in the Arabian Sea.<br></li>
+                        
+                            <li><b>Crawford Market:</b> Ideal for unique shopping and discovering local spices, fruits, and snacks.<br></li>
+                        
+                            <li><b>Sanjay Gandhi National Park:</b> Escape the city's chaos with greenery, Kanheri Caves, and wildlife.<br></li>
+                        
+                            <li><b>Bollywood Tour:</b> Explore the world of Indian cinema in Film City or Bandra's star homes.<br></li>
+                    </ol>
+                    
+                    Explore these places to experience Mumbai's vibrant culture, history, and food!</p>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        <p>&copy; 2025 TourismSite. All rights reserved.</p>
+    </footer>
+    <script>
+        const carousel = document.querySelector(".carousel-container");
+        const slide = document.querySelector(".carousel-slide");
+
+        function handleCarouselMove(positive = true) {
+            const slideWidth = slide.clientWidth + 15; // Includes the gap between slides
+            carousel.scrollLeft = positive ? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
+        }
+    </script>
+</body>
+</html>

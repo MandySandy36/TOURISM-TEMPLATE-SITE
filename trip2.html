@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip2</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #8db596, #cce3de); /* Forest and beach gradient */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #4caf50; /* Forest to beach gradient */
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffdd57; /* Bright sun yellow */
+        }
+
+
+        .header {
+            padding: 10px;
+            margin: 0px;
+            background: linear-gradient(to right, #38761d, #cfe2f3); /* Forest to beach gradient */
+            text-align: center;
+            background: url('wmhimg/background.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100px;
+            padding: 30px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+        }
+
+        .cards {
+            margin: 20px 20px 20px 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Adds space between text and image */
+            gap: 20px; /* Adds spacing between the elements */
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .cards .text h1 {
+            color: #3c763d; /* Forest green */
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .cards .text h3 {
+            color: #1e88e5; /* Beach blue */
+            margin-bottom: 15px;
+        }
+
+        .cards .text p {
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .text {
+            flex: 1; /* Text takes up equal space */
+        }
+
+        .image img {
+            max-width: 300px; /* Makes the image responsive */
+            height: auto; /* Preserves the aspect ratio */
+            flex: 2; /* Adjusts the image size relative to the text */
+            object-fit: cover; /* Ensures the image doesn't stretch */
+            right: 20px;
+        }
+
+        .infocard {
+            background-color: #8bd5a1; /* Beachy light blue */
+            padding: 50px 100px 50px 100px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #4caf50; /* Forest green */
+            color: white;
+        }
+    </style>
+
+    <header class="navbar">
+        <div class="logo">TourismSite</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tours</a>
+            <a href="#">Bookings</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>    
+
+    <div class="infocard">
+        <div class="cards">
+            <div class="text">
+                <h1>Lonavala & Khandala</h1>
+                <h3>1-day trip</h3>
+                <h4>Package : 10,000 Rs</h4>
+                <div class="image">
+                    <img src="wmhimg/Trips/2.png" alt="Mumbai">
+                </div>
+                <p><i>Here's some useful tourist information about Lonavala to enhance your trip:</i><br>
+
+                    <b>Location & Accessibility:</b> Lonavala is a hill station in Maharashtra, located about 65 km from Pune and 90 km from Mumbai. It is accessible via the Mumbai-Pune Expressway, offering scenic views of the Western Ghats.<br>
+                    
+                    <b>Best Time to Visit:</b> While Lonavala is beautiful year-round, the post-monsoon and winter seasons (October to March) are ideal due to pleasant weather and lush greenery.<br>
+                    
+                   <u><b>Key Attractions :</b></u>
+                    <ol>
+                    <li><b>Bhushi Dam:</b> A must-visit spot, especially during monsoons, with its overflowing water and scenic surroundings.</li><br>
+                    
+                    <li><b>Karla and Bhaja Caves:</b> Ancient Buddhist rock-cut caves with intricate carvings and historical significance.</li><br>
+                    
+                    <li><b>Tiger’s Leap & Lion’s Point:</b> Spectacular viewpoints offering panoramic views of valleys and sunsets.</li><br>
+                    
+                    <li><b>Della Adventure Park:</b> Perfect for adrenaline seekers, offering activities like zip-lining, bungee jumping, and ATV rides.</li><br>
+                    
+                    <li><b>Pawna Lake:</b> A serene spot for camping, picnicking, and stargazing.</li><br>
+                    
+                    <li><b>Rajmachi Fort:</b> Popular for trekking and its historical charm.</li><br>
+                    </ol>
+                    
+                    <b>Activities:</b> Enjoy nature walks, trekking to forts, camping by Pawna Lake, or indulging in thrilling adventures at Della Adventure Park.<br>
+                    
+                    <b>Local Delicacies:</b> Don’t miss the famous chikki (a traditional sweet) and authentic Maharashtrian cuisine.<br>
+                    
+                    <b>Recent Updates:</b> Lonavala continues to be a popular weekend getaway, and the local authorities maintain tourist hotspots like Bushi Dam and Karla Caves. Crowds are common during weekends and holidays, so plan accordingly to avoid peak hours.</p>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        <p>&copy; 2025 TourismSite. All rights reserved.</p>
+    </footer>
+    <script>
+        const carousel = document.querySelector(".carousel-container");
+        const slide = document.querySelector(".carousel-slide");
+
+        function handleCarouselMove(positive = true) {
+            const slideWidth = slide.clientWidth + 15; // Includes the gap between slides
+            carousel.scrollLeft = positive ? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
+        }
+    </script>
+</body>
+</html>
