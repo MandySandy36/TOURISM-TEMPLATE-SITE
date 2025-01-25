@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', sans-serif; /* Changed font to Poppins */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc00; /* Bright yellow for Maharashtra's vibrancy */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+.navbar img {
+    height: 40px;
+}
+
+.navbar a {
+    margin: 0 30px;
+    text-decoration: silver;
+    color: #4a4a4a; /* Darker text color */
+    font-weight: bold; /* Bold text for better visibility */
+    transition: color 1.0s; /* Smooth transition for hover effect */
+    font-size: 1.5em;
+}
+
+.navbar a:hover {
+    color: #d9534f; /* Change color on hover */
+}
+
+.main-content {
+    display: flex;
+}
+
+.scroll-image-1 {
+    background-color: #f9fcf9;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-image-1 .image-box {
+    width: 80%;
+    height: 470px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.scroll-image-1 .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #201f1f; /* Add a solid border */
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(63, 63, 63, 0.63);
+}
+
+.header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    color: rgb(5, 5, 5);
+    flex: 3;
+}
+
+.scroll-image-2 {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+.scroll-image-2 .image-box {
+    width: 30%;
+    height: 300px;
+    background-color: #fff;
+    border: 2px solid #ffffff;
+    position: relative;
+}
+
+.scroll-image-2 .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+text-align: center;
+margin-top: 50px;
+}
+
+h1 {
+font-size: 3em;
+margin-bottom: 20px;
+color: #333333;
+}
+
+.regions {
+display: flex;
+justify-content: center;
+list-style: none;
+padding: 0;
+}
+
+.region {
+margin: 0 10px;
+font-size: 1.2em;
+color: #7a5219;
+}
+
+
+.destination {
+    background-color: #f0d3ff;
+    text-align: center;
+    padding: 10px;
+    display: flex; /* Use flexbox for layout */
+}
+
+.maharashtra {
+    flex: 1 1 40%; /* Take up 40% of the width */
+    background-color:#f0d3ff;
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-aligns children horizontally */
+}
+
+.maharashtra-text {
+    font-size: 4.5em; /* Adjusted font size for better visibility */
+    margin: 0; /* Remove default margin */
+}
+
+.soul-of-india {
+    color: blue; /* Change this to your desired color */
+    margin-top: 10px; /* Adds space above the h3 */
+}
+
+.destination .maharashtra img {
+    height: 800px; /* Set height for the image */
+    width: 600px; /* Maintain aspect ratio */
+    margin-top: 10px; /* Adds space above the image */
+    object-fit: cover; /* Ensure the image covers the box */
+    border: 2px solid #201f1f; /* Add a solid border */
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(63, 63, 63, 0.63);
+}
+
+.regions-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    flex: 1 1 60%; /* Take up 60% of the width */
+    justify-content: space-around; /* Space out the regions */
+}
+
+.destination .region {
+    flex: 1 1 30%; /* Each region box takes up 30% of the width */
+    background-color: #f0d3ff;
+    margin: 5px; /* Adjusted margin for spacing */
+    padding: 5px; /* Reduced padding */
+    display: flex;
+    flex-direction: column; /* Stack image and title vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.destination .region img {
+    width: 100%; /* Set to 100% to fill the box */
+    height: 420px; /* Maintain aspect ratio */
+    max-height: 420px; /* Set a maximum height for the images */
+    object-fit: cover; /* Ensure the image covers the box */
+    border: 2px solid #201f1f; /* Add a solid border */
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(63, 63, 63, 0.63); /* Optional: add a subtle shadow */
+}
+
+.region-title {
+    margin-top: 9px; /* Space between image and title */
+    font-size: 2em; /* Font size for the title */
+    text-align: center; /* Center the title text */
+    color: #650b0b; /* Color for the title text */
+}
+
+
+
+  
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab.active {
+    background-color: #d74e4e;
+}
+
+.content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between;
+}
+
+.item {
+    width: 48%; /* Adjust width to fit two items in a row */
+    margin-bottom: 15px;
+}
+
+/* Styling for the content of each tab */
+.content .item img {
+    max-width: 60%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.content .item h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.content .item p {
+    line-height: 1.5;
+    color: #000000;
+}
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+font-size: 3em;
+font-weight: bold;
+margin-bottom: 0;
+}
+
+.regions {
+display: flex;
+justify-content: space-around;
+padding: 20px;
+}
+
+.regions a {
+text-decoration: none;
+color: #333;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.book-now {
+text-align: center;
+padding: 20px;
+}
+
+.book ```html
+.now .btn {
+background-color: #d74e4e;
+color: white;
+padding: 15px 30px;
+border: none;
+border-radius: 5px;
+font-size: 1.2em;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.book-now .btn:hover {
+background-color: #52a1fb;
+}
+
+.footer {
+background-color: #f2f2f2;
+text-align: center;
+padding: 10px;
+position: relative;
+bottom: 0;
+width: 100%;
+}
+
+.footer p {
+margin: 5px 0;
+color: #555;
+}
+
+.footer a {
+color: #5db0ee;
+text-decoration: none;
+}
+
+.footer a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .navbar a {
+        display: block;
+        margin: 5px 0;
+    }
+    .destination .region {
+        flex: 1 1 100%;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .scroll-image-2 {
+        flex-direction: column;
+    }
+    .scroll-image-2 .image-box {
+        width: 80%;
+        margin: 10px auto;
+    }
+}

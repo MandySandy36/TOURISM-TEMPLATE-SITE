@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #2c3e50;
+    color: white;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #f39c12;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #f39c12;
+    color: #2c3e50;
+}
+
+.hero {
+    text-align: center;
+    background: #2980b9;
+    padding: 50px 20px;
+    color: white;
+}
+
+.hero .highlight-text {
+    background: #e74c3c;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.hero-title h1 {
+    background: #f39c12;
+    color: #2c3e50;
+    padding: 20px;
+    font-size: 2.5em;
+    border-radius: 10px;
+}
+
+.popular-packages {
+    padding: 20px;
+    background: #ecf0f1;
+    text-align: center;
+}
+
+.popular-packages h2 {
+    margin-bottom: 30px;
+    
+}
+
+.scrollable-packages {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.scrollable-packages .package {
+    flex: 0 0 auto;
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.scrollable-packages .package:hover {
+    transform: scale(1.05);
+}
+
+.scrollable-packages .package img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.summary-table th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+footer {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+    .scrollable-packages {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .scrollable-packages .package {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-title h1 {
+        font-size: 2em;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .menu li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar .menu a:hover {
+    color: #ffdd40;
+}
+
+.carousel {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
