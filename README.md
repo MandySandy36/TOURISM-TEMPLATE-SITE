@@ -18,4 +18,4 @@ Welcome to the **Tourism Template Website**! This project is a template designed
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/username/tourism-template.git
+   git clone https://github.com/aspatil0/tourism-template.git
