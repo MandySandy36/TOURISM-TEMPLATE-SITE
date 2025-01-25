@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EastMH</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #F68B1F; /* Forest and beach gradient */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #F68B1F; /* Forest to beach gradient */
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffdd57; /* Bright sun yellow */
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            background: #da8e2b; /* Light beach-inspired green */
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            display: grid;
+            margin-block: auto;
+            height: max-content;
+            width: 50px;
+            background-color: #d4a15f;
+            border: none;
+            font-size: 3rem;
+            padding: 0;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .carousel-arrow:hover,
+        .carousel-arrow:focus {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .carousel-arrow--prev {
+            left: 0;
+        }
+
+        .carousel-arrow--next {
+            right: 0;
+        }
+
+        .carousel-container {
+            width: 90%;
+            padding-block: 16px;
+            margin: 16px auto;
+            overflow-x: hidden;
+            display: flex;
+            gap: 15px; /* Increased gap for slide distinction */
+            align-items: center;
+            scroll-snap-type: x mandatory;
+            flex-flow: row nowrap;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-slide {
+            width: calc(33.33% - 15px); /* Adjusted to match gap */
+            height: auto;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: center;
+            background: #F9C74F; /* Forest to beach gradient */
+            text-align: center;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .carousel-slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-slide img {
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px; /* Add spacing below the image */
+        }
+
+        .carousel-slide h1 {
+            margin: 10px 0 15px; /* Adjusted bottom margin */
+            font-size: 1.5rem;
+        }
+
+        .carousel-slide img:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        @media (max-width: 600px) {
+            .carousel-slide {
+                width: 90%; /* For mobile, occupy the majority of the screen */
+            }
+        }
+
+        .header {
+            padding: 10px;
+            margin: 0px;
+            background: linear-gradient(to right, #38761d, #cfe2f3); /* Forest to beach gradient */
+            text-align: center;
+            background: url('wmhimg/background2.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100px;
+            padding: 30px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+        }
+
+        .cards {
+            margin: 20px 20px 20px 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Adds space between text and image */
+            gap: 20px; /* Adds spacing between the elements */
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .cards .text h1 {
+            color: #D14423; /* Forest green */
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .cards .text h3 {
+            color: #F68B1F; /* Beach blue */
+            margin-bottom: 15px;
+        }
+
+        .cards .text p {
+            color: #4A4A4A;
+            line-height: 1.6;
+        }
+
+        .text {
+            flex: 1; /* Text takes up equal space */
+        }
+
+        .image img {
+            max-width: 300px; /* Makes the image responsive */
+            height: auto; /* Preserves the aspect ratio */
+            flex: 1; /* Adjusts the image size relative to the text */
+            object-fit: cover; /* Ensures the image doesn't stretch */
+        }
+
+        .infocard {
+            background-color: #E5D5C5; /* Beachy light blue */
+            padding: 50px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #F68B1F; /* Forest green */
+            color: white;
+        }
+    </style>
+
+    <header class="navbar">
+        <div class="logo">TourismSite</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tours</a>
+            <a href="#">Bookings</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>    
+    <div class="header">
+        <h1>East Maharashtra: Where Heritage Meets Wilderness</h1>
+    </div>
+    <div class="carousel">
+        <button class="carousel-arrow carousel-arrow--prev" onclick="handleCarouselMove(false)">
+            &#8249;
+        </button>
+      
+        <button class="carousel-arrow carousel-arrow--next" onclick="handleCarouselMove()">
+            &#8250;
+        </button>
+        
+        <div class="carousel-container" dir="ltr">
+            <div class="carousel-slide">
+                <h1>Nagpur</h1>
+                <img src="wmhimg/7.jpeg" alt="Nagpur">
+            </div>
+            <div class="carousel-slide">
+                <h1>Chandrapur</h1>
+                <img src="wmhimg/8.jpg" alt="Chandrapur">
+            </div>
+            <div class="carousel-slide">
+                <h1>Bhandara</h1>
+                <img src="wmhimg/9.jpeg" alt="Bhandara">
+            </div>
+            <div class="carousel-slide">
+                <h1>Amravati</h1>
+                <img src="wmhimg/10.jpg" alt="Amravati">
+            </div>
+            <div class="carousel-slide">
+                <h1>Yavatmal</h1>
+                <img src="wmhimg/11.jpeg" alt="Yavatmal">
+            </div>
+            <div class="carousel-slide">
+                <h1>Akola</h1>
+                <img src="wmhimg/12.jpg" alt="Akola">
+            </div>
+        </div>
+    </div>
+    <div class="infocard">
+        <div class="cards">
+            <div class="text">
+                <h1>Nagpur</h1>
+                <h3>3-day trip</h3>
+                <p>Nagpur is a vibrant city located in the state of Maharashtra, India. Known as the "Orange City" due to its famous orange orchards, it is also the winter capital of Maharashtra. The city is geographically significant as it lies almost at the center of India.</p>
+                <a href="trip7.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/7.jpeg" alt="Mumbai">
+            </div>
+        </div>
+        <div class="cards">
+            <div class="text">
+                <h1>Chandrapur</h1>
+                <h3>3-day trip</h3>
+                <p>Chandrapur, also known as the "Black Gold City," is located in the state of Maharashtra, India. It earned this nickname due to its rich coal deposits1. The city was founded by a Gond king in the 13th century and has a rich history of being ruled by various dynasties.</p>
+                <a href="trip8.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/8.jpg" alt="Lonavala & Khandala">
+            </div>
+        </div>
+        <div class="cards">
+            <div class="text">
+                <h1>Bhandara</h1>
+                <h3>2-day trip</h3>
+                <p>Bhandara is a district in the state of Maharashtra, India. It's known for its rich history and cultural heritage. The district headquarters are located in the town of Bhandara. The area is often referred to as the "District of Ponds" due to its numerous water bodies.</p>
+                <a href="trip9.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/9.jpeg" alt="Mahabaleshwar">
+            </div>
+        </div>
+        <div class="cards">
+            <div class="text">
+                <h1>Amravati</h1>
+                <h3>2-day trip</h3>
+                <p>Amravati is a vibrant city in Maharashtra, known as the cultural capital of the Vidarbha region. It offers a blend of culture, religion, and nature.</p>
+                <a href="trip10.html">Know More..</a>
+            </div>
+            <div class="image">
+                <img src="wmhimg/4.webp" alt="Nashik">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 TourismSite. All rights reserved.</p>
+    </footer>
+    <script>
+        const carousel = document.querySelector(".carousel-container");
+        const slide = document.querySelector(".carousel-slide");
+
+        function handleCarouselMove(positive = true) {
+            const slideWidth = slide.clientWidth + 15; // Includes the gap between slides
+            carousel.scrollLeft = positive ? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
+        }
+    </script>
+</body>
+</html>
