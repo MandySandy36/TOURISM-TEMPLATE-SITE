@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+header {
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: black;
+    padding: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+     font-size: 15px;
+    color: red;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    text-align: center;
+    font-size: 40px;
+       
+
+}
+.content-section {
+    padding: 20px;
+    
+}
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.places {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.place-card {
+    background: white;
+    width: 50%;
+    display: inline-block;
+    display: flexbox;
+    
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.place-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.place-card h3 {
+    font-size: 20px;
+    text-align: center;
+}
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.qq{
+    width: 100%;
+    height: 400px;
+}
+
+
+.place-card h3 a{
+    text-decoration: none;
+    color: black;
+}
+.place-card h3 a:hover{
+    color: red;
+    font-size: 18px;
+}
+.place-card p{
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
